@@ -6,7 +6,7 @@ from .models import Bank, Transaction
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ['id', 'username', 'email']
 
 
 class BankSerializer(serializers.ModelSerializer):
