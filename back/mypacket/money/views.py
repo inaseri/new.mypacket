@@ -39,6 +39,8 @@ class UserViewSet(viewsets.ModelViewSet):
 def login(request):
     username = request.data.get("username")
     password = request.data.get("password")
+    print('username is:', username)
+    print('password is:', password)
     if username is None or password is None:
         return Response({'error': 'Please provide both username and password'},
                         status=HTTP_400_BAD_REQUEST)

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mypacket": {
+    "mdb-angular-free": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mypacket",
+            "outputPath": "dist/mdb-angular-free",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -34,12 +34,12 @@
               "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
               "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
               "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "node_modules/animate.css/animate.css",
               "src/styles.scss"
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
-              "node_modules/hammerjs/hammer.min.js"
+              "node_modules/hammerjs/hammer.min.js",
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
@@ -77,18 +77,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mypacket:build"
+            "browserTarget": "mdb-angular-free:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mypacket:build:production"
+              "browserTarget": "mdb-angular-free:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mypacket:build"
+            "browserTarget": "mdb-angular-free:build"
           }
         },
         "test": {
@@ -125,15 +125,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mypacket:serve"
+            "devServerTarget": "mdb-angular-free:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mypacket:serve:production"
+              "devServerTarget": "mdb-angular-free:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "mypacket"
+    }
+  },
+  "defaultProject": "mdb-angular-free"
 }

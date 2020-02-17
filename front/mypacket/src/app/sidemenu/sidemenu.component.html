@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md font-weight-bold default-color">
+  <a class="navbar-brand nav-link p-2" [routerLink]="[ '/']">
+    جیب من
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/']">
+          &nbsp;<i class="fas fa-home"></i>&nbsp;  خانه
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/aIncome/1']">
+          &nbsp;<i class="fas fa-chart-line"></i>&nbsp; درآمد
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/aExpense/2']">
+          &nbsp;<i class="fas fa-upload"></i>&nbsp; هزینه
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/aDebit/3']">
+          &nbsp;<i class="fas fa-user-minus"></i>&nbsp; بدهی
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/aDemand/4']">
+          &nbsp;<i class="fas fa-user-plus"></i>&nbsp; مطالبه
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ 'lBanks/']">
+          &nbsp;<i class="fas fa-home"></i> حساب
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          &nbsp;<i class="fas fa-phone-alt"></i>&nbsp; تماس
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          &nbsp;<i class="fas fa-sign-in-alt"></i>&nbsp; خروج
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="sidenav"></nav>
+

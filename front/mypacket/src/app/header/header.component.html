@@ -1,0 +1,38 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false">
+  <mdb-navbar-brand><a class="navbar-brand" [routerLink]="[ '/']">جیب من</a></mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a [routerLink]="[ '/aIncome/1']" class="nav-link waves-light" mdbWavesEffect>
+          <i class="fas fa-chart-line"></i>
+          درآمد ها
+        </a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="[ '/aExpense/2']" class="nav-link waves-light" mdbWavesEffect>
+          <i class="fas fa-upload"></i>
+          هزینه ها
+        </a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="[ '/aDebit/3']" class="nav-link waves-light" mdbWavesEffect>
+          <i class="fas fa-user-minus"></i>
+          بدهی ها
+        </a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="[ '/aDemand/4']" class="nav-link waves-light" mdbWavesEffect>
+          <i class="fas fa-user-plus"></i>
+          مطالبات ها
+        </a>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="user"></mdb-icon>پروفایل<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">خروج</a>
+        </div>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
