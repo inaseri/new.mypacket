@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { User } from '../models/user';
 import { Banks } from '../models/banks';
-import {Observable, pipe, throwError} from 'rxjs';
+import { Observable, pipe, throwError} from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -13,12 +13,14 @@ export class ApiService {
 
   // API path
   base_path = 'http://127.0.0.1:8000/api/';
+  token = 'token';
+  public user = localStorage.getItem('user_id');
 
   constructor(private http: HttpClient) {
   }
 
   // Http Options
-  httpOptions = {
+  public httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
@@ -39,7 +41,7 @@ export class ApiService {
     // return an observable with a user-facing error message
     return throwError(
       'Something bad happened; please try again later.');
-  };
+  }
 
 
   // Login a user
@@ -54,7 +56,17 @@ export class ApiService {
 
   createBank(item): Observable<Banks> {
     return this.http
-      .post<Banks>(this.base_path + 'banks/', JSON.stringify(item), this.httpOptions)
+      .post<Banks>(this.base_path + 'banks/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      );
+  }
+
+  // Get banks data
+  getList(): Observable<Banks> {
+    return this.http
+      .get<Banks>(this.base_path + 'banks/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
       .pipe(
         retry(2),
         catchError(this.handleError)

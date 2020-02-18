@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 declare var $: any;
 
 @Component({
@@ -9,6 +10,8 @@ declare var $: any;
 export class SidemenuComponent implements OnInit {
 
   constructor() { }
+  public router: Router;
+
 
   ngOnInit() {
     var $sidenav = $('.sidenav'),
@@ -82,6 +85,15 @@ export class SidemenuComponent implements OnInit {
         collapsed = false;
       }
     }
+  }
+
+  onlogout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user_id');
+    localStorage.clear();
+    console.log(localStorage.getItem('token'));
+    this.router.navigate(['login']);
+
   }
 
 }

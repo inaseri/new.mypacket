@@ -1,14 +1,14 @@
 <div class="container">
-  <div class="row" style="margin-top: 20px;">
+  <div class="row" style="margin-top: 20px;" *ngFor="let item of banksData">
       <div class="col-md-3"></div>
       <div class="col-md-6">
         <div class="card text-center">
           <div class="card-header">
-            <i class="fas fa-home"></i>&nbsp;لیست حساب ها
+            <i class="fas fa-home"></i>&nbsp; حساب
           </div>
           <div class="card-body">
-            <p style="width: 100%; text-align: right;">نام حساب</p>
-            <p style="width: 100%; text-align: left;">رقم حساب</p>
+            <p style="width: 100%; text-align: right;"> {{ item.name_bank }}</p>
+            <p style="width: 100%; text-align: left;">{{item.cash_bank}}</p>
           </div>
           <div class="card-footer">
               <a [routerLink]="[ '/lIncomes/1']" class="btn btn-success px-3">

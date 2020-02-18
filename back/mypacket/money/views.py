@@ -39,8 +39,6 @@ class UserViewSet(viewsets.ModelViewSet):
 def login(request):
     username = request.data.get("username")
     password = request.data.get("password")
-    print('username is:', username)
-    print('password is:', password)
     if username is None or password is None:
         return Response({'error': 'Please provide both username and password'},
                         status=HTTP_400_BAD_REQUEST)
@@ -50,7 +48,7 @@ def login(request):
         return Response({'error': 'Invalid Credentials'},
                         status=HTTP_404_NOT_FOUND)
     token, _ = Token.objects.get_or_create(user=user)
-    return Response({'token': token.key}, status=HTTP_200_OK)
+    return Response({'token': token.key, 'id': user.id}, status=HTTP_200_OK)
 
 
 @api_view(['POST'])
