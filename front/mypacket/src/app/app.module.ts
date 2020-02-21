@@ -31,8 +31,8 @@ import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
-  { path: '', component: ReportComponent },
-  { path: 'aIncome/:type', component: AddtransactionComponent },
+  { path: '', component: LoginComponent },
+  { path: 'aIncome/:type', component: AddtransactionComponent,  },
   { path: 'aExpense/:type', component: AddexpenceComponent },
   { path: 'aDebit/:type', component: AdddebitComponent },
   { path: 'aDemand/:type', component: AdddemandComponent },
@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: 'lBanks', component: LbanksComponent },
   { path: 'aBank', component: AbankComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'report', component: ReportComponent }
 ];
 
 @NgModule({

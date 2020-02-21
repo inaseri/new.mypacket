@@ -4,7 +4,6 @@ import {User} from '../models/user';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public apiService: ApiService,
-    public router: Router
+    public router: Router,
   ) {
     this.data = new User();
   }
@@ -28,11 +27,12 @@ export class LoginComponent implements OnInit {
 
   loginForm() {
     this.apiService.login(this.data).subscribe(response => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/report']);
       this.apiService.token = response.token;
       this.apiService.user = (response.id.toString());
       localStorage.setItem('token', response.token);
       localStorage.setItem('user_id', response.id.toString());
+      this.apiService.isUserLoggedIn = true;
     });
 
   }

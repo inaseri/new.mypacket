@@ -15,6 +15,7 @@ export class ApiService {
   base_path = 'http://127.0.0.1:8000/api/';
   token = 'token';
   public user = localStorage.getItem('user_id');
+  public isUserLoggedIn = false;
 
   constructor(private http: HttpClient) {
   }

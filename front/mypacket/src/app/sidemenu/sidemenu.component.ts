@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import { ApiService } from "../services/api.service";
+
 declare var $: any;
 
 @Component({
@@ -9,8 +11,10 @@ declare var $: any;
 })
 export class SidemenuComponent implements OnInit {
 
-  constructor() { }
-  public router: Router;
+    constructor(
+      public apiService: ApiService,
+      public router: Router
+    ) { }
 
 
   ngOnInit() {
@@ -91,9 +95,8 @@ export class SidemenuComponent implements OnInit {
     localStorage.removeItem('token');
     localStorage.removeItem('user_id');
     localStorage.clear();
-    console.log(localStorage.getItem('token'));
-    this.router.navigate(['login']);
-
+    this.router.navigate(['']);
+    this.apiService.isUserLoggedIn = false;
   }
 
 }
