@@ -17,13 +17,21 @@ export class LbanksComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAllStudents();
+    this.getAllBanks();
   }
 
   //Get saved list of Banks
-  getAllStudents() {
+  getAllBanks() {
     this.apiService.getList().subscribe(response => {
       this.banksData = response;
+    });
+  }
+
+  delete(item) {
+    //Delete item in Bank data
+    this.apiService.deleteBank(item.id).subscribe(Response => {
+      //Update list after delete is successful
+      this.getAllBanks();
     });
   }
 

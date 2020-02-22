@@ -11,12 +11,12 @@
             <p style="width: 100%; text-align: left;">{{item.cash_bank}}</p>
           </div>
           <div class="card-footer">
-              <a [routerLink]="[ '/lIncomes/1']" class="btn btn-success px-3">
+              <a [routerLink]="['/changeBank', item.id]" class="btn btn-success px-3">
                 <i class="fas fa-edit"></i>
               </a>
-              <a [routerLink]="[ '/aIncome/1']" class="btn btn-danger px-3">
+              <button (click)="delete(item)" class="btn btn-danger px-3">
                 <i class="fas fa-trash-alt"></i>
-              </a>
+              </button>
           </div>
         </div>
       </div>

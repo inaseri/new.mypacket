@@ -15,7 +15,7 @@ export class ApiService {
   base_path = 'http://127.0.0.1:8000/api/';
   token = 'token';
   public user = localStorage.getItem('user_id');
-  public isUserLoggedIn = false;
+  public isUserLoggedIn: boolean;
 
   constructor(private http: HttpClient) {
   }
@@ -68,6 +68,34 @@ export class ApiService {
   getList(): Observable<Banks> {
     return this.http
       .get<Banks>(this.base_path + 'banks/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      );
+  }
+
+  deleteBank(id) {
+    return this.http
+      .delete<Banks>(this.base_path + 'banks/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      );
+  }
+
+  // Update bank data
+  updateBank(id, item): Observable<Banks> {
+    return this.http
+      .put<Banks>(this.base_path + 'banks/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      );
+  }
+
+  getBaknItem(id): Observable<Banks> {
+    return this.http
+      .get<Banks>(this.base_path + 'banks/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
       .pipe(
         retry(2),
         catchError(this.handleError)

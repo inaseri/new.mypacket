@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
 import { ApiService } from "../services/api.service";
 
 declare var $: any;
@@ -11,15 +10,19 @@ declare var $: any;
 })
 export class SidemenuComponent implements OnInit {
 
+    public show: boolean;
+
     constructor(
-      public apiService: ApiService,
-      public router: Router
+      public apiService: ApiService
     ) { }
 
 
   ngOnInit() {
+
     var $sidenav = $('.sidenav'),
+
     $toggler = $('.navbar-toggler'),
+
     collapsed = false;
 
     $sidenav.css('top', $('.navbar').outerHeight());
@@ -89,14 +92,19 @@ export class SidemenuComponent implements OnInit {
         collapsed = false;
       }
     }
+
+    // this below canditon use for change the menu item.
+    if (localStorage.getItem('token') != null) {
+      this.show = true;
+    } else  {
+      this.show = false;
+    }
   }
 
   onlogout() {
     localStorage.removeItem('token');
     localStorage.removeItem('user_id');
     localStorage.clear();
-    this.router.navigate(['']);
     this.apiService.isUserLoggedIn = false;
   }
-
 }
