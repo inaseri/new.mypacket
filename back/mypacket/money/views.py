@@ -110,3 +110,48 @@ def bank_detail(request, pk):
         bank.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+
+@csrf_exempt
+@api_view(['GET', 'POST'])
+def transactions_list(request, type):
+    """
+    List all code banks, or create a new snippet.
+    """
+    if request.method == 'GET':
+        transaction = Transaction.objects.all().filter(type=type)
+        serializer = TransactionSerializer(transaction, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = TransactionSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@csrf_exempt
+@api_view(['GET', 'PUT', 'DELETE'])
+def transaction_detail(request, pk):
+    """
+    Retrieve, update or delete a code snippet.
+    """
+    try:
+        transaction = Transaction.objects.get(pk=pk)
+    except Transaction.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = TransactionSerializer(transaction)
+        return Response(serializer.data)
+
+    elif request.method == 'PUT':
+        serializer = TransactionSerializer(transaction, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        transaction.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

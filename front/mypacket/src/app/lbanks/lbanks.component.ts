@@ -30,7 +30,6 @@ export class LbanksComponent implements OnInit {
   delete(item) {
     //Delete item in Bank data
     this.apiService.deleteBank(item.id).subscribe(Response => {
-      //Update list after delete is successful
       this.getAllBanks();
     });
   }

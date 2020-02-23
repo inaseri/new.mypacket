@@ -1,8 +1,11 @@
+import {DatePickerComponent} from "ng2-jalali-date-picker";
+
 export class Transactoin {
-  typet: number;
+  type: number;
   cash: number;
   desc: string;
   title: string;
-  bank_owner: string;
-  owner: number;
+  source: string;
+  owner: string;
+  date: DatePickerComponent;
 }

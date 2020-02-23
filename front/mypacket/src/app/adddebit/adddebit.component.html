@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" dir="rtl">
   <div class="row" style="margin-top: 30px;">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -7,25 +7,23 @@
           <strong>افزودن بدهی</strong>
         </h5>
         <div class="card-body px-lg-5 pt-0">
-          <form class="text-center" style="color: #757575;" action="#!">
+          <div class="text-center" style="color: #757575;">
             <div class="form-row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="رقم">
+                <input type="tel" class="form-control" placeholder="عنوان" [(ngModel)]="data.title" >
               </div>
               <div class="col">
-                <input type="tel" class="form-control" placeholder="عنوان">
+                <input type="text" class="form-control" placeholder="رقم" [(ngModel)]="data.cash" >
               </div>
             </div>
-            <input type="text" class="form-control" placeholder="توضیحات">
-            <select class="custom-select form-control" style="direction: rtl">
-              <option selected>حساب مبدا</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+            <input type="text" class="form-control" placeholder="توضیحات" [(ngModel)]="data.desc" >
+            <select class="custom-select form-control" style="direction: rtl" [(ngModel)]="data.source">
+              <option>حساب مبدا را انتخاب کنید</option>
+              <option *ngFor="let item of banksData" [value]="item.id">&nbsp; نام حساب: &nbsp;{{item.name_bank}}</option>
             </select>
-            <dp-date-picker dir="rtl" mode="day" placeholder="تاریخ" theme="dp-material" class="new-dp" style="margin-top: 30px;"></dp-date-picker>
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">ذخیره</button>
-          </form>
+            <dp-date-picker dir="rtl" mode="day" placeholder="تاریخ" theme="dp-material" class="new-dp" [(ngModel)]="data.date" style="margin-top: 30px;"></dp-date-picker>
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="submitForm()">ذخیره</button>
+          </div>
         </div>
       </div>
     </div>

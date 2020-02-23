@@ -29,6 +29,7 @@ import { AbankComponent } from './abank/abank.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ChangeBankComponent } from './change-bank/change-bank.component';
+import { ChangeTransactionComponent } from './change-transaction/change-transaction.component';
 
 
 const routes: Routes = [
@@ -45,7 +46,8 @@ const routes: Routes = [
   { path: 'aBank', component: AbankComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'report', component: ReportComponent },
-  { path: 'changeBank/:id', component: ChangeBankComponent }
+  { path: 'changeBank/:id', component: ChangeBankComponent },
+  { path: 'changeTransaction/:id', component: ChangeTransactionComponent }
 ];
 
 @NgModule({
@@ -67,7 +69,8 @@ const routes: Routes = [
     AbankComponent,
     LoginComponent,
     RegisterComponent,
-    ChangeBankComponent
+    ChangeBankComponent,
+    ChangeTransactionComponent
   ],
   imports: [
     BrowserModule,
