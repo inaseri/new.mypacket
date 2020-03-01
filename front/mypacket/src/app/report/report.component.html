@@ -78,7 +78,7 @@
               <tr *ngFor="let item of incomesData">
                 <td>{{item.title}}</td>
                 <td>{{item.cash}}</td>
-                <td>{{item.date}}</td>
+                <td>{{item.date | jalali }}</td>
                 <td>{{item.desc}}</td>
               </tr>
             </tbody>
