@@ -8,7 +8,7 @@
           </div>
           <div class="card-body">
             <p style="width: 100%; text-align: right;"> {{ item.name_bank }}</p>
-            <p style="width: 100%; text-align: left;">{{item.cash_bank}}</p>
+            <p style="width: 100%; text-align: left;">{{item.cash_bank | number}}</p>
           </div>
           <div class="card-footer">
               <a [routerLink]="['/changeBank', item.id]" class="btn btn-success px-3">

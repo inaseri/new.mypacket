@@ -25,6 +25,7 @@
     "angular2-jwt": "^0.2.3",
     "chart.js": "^2.5.0",
     "hammerjs": "^2.0.8",
+    "jalaali-js": "^1.1.0",
     "jalali-moment": "^3.3.3",
     "jquery": "^3.4.1",
     "ng2-jalali-date-picker": "^2.2.7",

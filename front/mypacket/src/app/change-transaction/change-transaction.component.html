@@ -10,18 +10,15 @@
           <div class="text-center" style="color: #757575;">
             <div class="form-row">
               <div class="col">
-                <input type="tel" class="form-control" placeholder="عنوان" [(ngModel)]="data.title" >
+                <input type="tel" class="form-control" placeholder="عنوان" [(ngModel)]="data.title">
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="رقم" [(ngModel)]="data.cash" >
+                <input type="text" class="form-control" placeholder="رقم" [(ngModel)]="data.cash">
               </div>
             </div>
-            <input type="text" class="form-control" placeholder="توضیحات" [(ngModel)]="data.desc" >
-            <select class="custom-select form-control" style="direction: rtl" [(ngModel)]="data.source">
-              <option>حساب مبدا را انتخاب کنید</option>
-              <option *ngFor="let item of banksData" [value]="item.id">&nbsp; نام حساب: &nbsp;{{item.name_bank}}</option>
-            </select>
-            <dp-date-picker dir="rtl" mode="day" placeholder="تاریخ" theme="dp-material" class="new-dp" [(ngModel)]="data.date" style="margin-top: 30px;"></dp-date-picker>
+            <input type="text" class="form-control" placeholder="توضیحات" [(ngModel)]="data.desc">
+            <input type="text" class="form-control" style="direction: rtl" [(ngModel)]="data.source">
+            <input type="text" class="form-control" style="direction: rtl" [(ngModel)]="data.date">
             <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="submitForm()">ذخیره</button>
           </div>
         </div>

@@ -10,10 +10,10 @@
           <div class="text-center" style="color: #757575;">
             <div class="form-row">
               <div class="col">
-                <input type="tel" class="form-control" placeholder="عنوان" [(ngModel)]="data.title" >
+                <input type="text" class="form-control" placeholder="عنوان" [(ngModel)]="data.title" >
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="رقم" [(ngModel)]="data.cash" >
+                <input type="tel" step=1.0 class="form-control" placeholder="رقم" [(ngModel)]="data.cash" >
               </div>
             </div>
             <input type="text" class="form-control" placeholder="توضیحات" [(ngModel)]="data.desc" >

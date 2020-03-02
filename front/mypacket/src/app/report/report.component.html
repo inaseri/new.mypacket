@@ -40,7 +40,7 @@
             <tbody>
               <tr *ngFor="let item of expenseData">
                 <td>{{item.title}}</td>
-                <td>{{item.cash}}</td>
+                <td>{{item.cash | number}}</td>
                 <td>{{item.date}}</td>
                 <td>{{item.desc}}</td>
               </tr>
@@ -77,8 +77,8 @@
             <tbody>
               <tr *ngFor="let item of incomesData">
                 <td>{{item.title}}</td>
-                <td>{{item.cash}}</td>
-                <td>{{item.date }}</td>
+                <td>{{item.cash | number}}</td>
+                <td>{{item.date}}</td>
                 <td>{{item.desc}}</td>
               </tr>
             </tbody>
@@ -116,7 +116,7 @@
             <tbody>
               <tr *ngFor="let item of demandData">
                 <td>{{item.title}}</td>
-                <td>{{item.cash}}</td>
+                <td>{{item.cash | number}}</td>
                 <td>{{item.date}}</td>
                 <td>{{item.desc}}</td>
               </tr>
@@ -153,7 +153,7 @@
             <tbody>
               <tr *ngFor="let item of debitsData">
                 <td>{{item.title}}</td>
-                <td>{{item.cash}}</td>
+                <td>{{item.cash | number}}</td>
                 <td>{{item.date}}</td>
                 <td>{{item.desc}}</td>
               </tr>
