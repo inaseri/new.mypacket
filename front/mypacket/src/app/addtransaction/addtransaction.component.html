@@ -17,8 +17,8 @@
               </div>
             </div>
             <input type="text" class="form-control" placeholder="توضیحات" [(ngModel)]="data.desc" >
-            <select class="custom-select form-control" style="direction: rtl" [(ngModel)]="data.source">
-              <option>حساب مبدا را انتخاب کنید</option>
+            <select  class="custom-select form-control" style="direction: rtl" [(ngModel)]="data.source" >
+              <option >انتخاب حساب مبدا</option>
               <option *ngFor="let item of banksData" [value]="item.id">&nbsp; نام حساب: &nbsp;{{item.name_bank}}</option>
             </select>
             <dp-date-picker dir="rtl" mode="day" placeholder="تاریخ" theme="dp-material" class="new-dp" [(ngModel)]="data.date" style="margin-top: 30px;"></dp-date-picker>

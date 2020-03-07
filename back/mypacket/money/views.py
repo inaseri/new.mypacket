@@ -2,7 +2,6 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
 from money.serializers import UserSerializer
 from rest_framework.authtoken.models import Token
@@ -23,7 +22,7 @@ from .serializers import BankSerializer, TransactionSerializer
 
 # model imports
 from .models import Transaction, Bank
-from django.http import HttpResponse, JsonResponse
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -125,6 +124,24 @@ def transactions_list(request, type):
     elif request.method == 'POST':
         serializer = TransactionSerializer(data=request.data)
         if serializer.is_valid():
+
+            # use this line to get bank from serializer
+            bank = Bank.objects.filter(name_bank=serializer.validated_data['source'])
+
+            # the below line use for get cash from the transaction
+            cash = serializer.validated_data['cash']
+
+            for selected_bank in bank:
+                cash_in_bnak = selected_bank.cash_bank
+
+            # use the below line to change cash in bank
+            if type == 1 or type == 4:
+                cash = cash_in_bnak + cash
+            else:
+                cash = cash_in_bnak - cash
+
+            Bank.objects.filter(name_bank=serializer.validated_data['source']).update(cash_bank=cash)
+
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -134,10 +151,10 @@ def transactions_list(request, type):
 @api_view(['GET', 'PUT', 'DELETE'])
 def transaction_detail(request, pk):
     """
-    Retrieve, update or delete a code snippet.
+    Retrieve, update or delete a code transaction.
     """
     try:
-        transaction = Transaction.objects.get(pk=pk)
+        transaction = Transaction.objects.get(id=pk)
     except Transaction.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -153,5 +170,29 @@ def transaction_detail(request, pk):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
+        # the below line use for delete api
         transaction.delete()
+
+        # the below line use for get detail of transaction
+        transaction2 = Transaction.objects.filter(id=pk)
+
+        # the below loop use for separate the objects from query set
+        for select_item in transaction2:
+
+            type_transaction = select_item.type
+            cash_transaction = select_item.cash
+            source_transaction = select_item.source
+
+            bank = Bank.objects.filter(name_bank=source_transaction)
+
+            for selectedBank in bank:
+                cash_in_bank = selectedBank.cash_bank
+
+            if type_transaction == 1 or type_transaction == 4:
+                cash_in_bank = cash_in_bank - cash_transaction
+            else:
+                cash_in_bank = cash_in_bank + cash_transaction
+
+            Bank.objects.filter(name_bank=source_transaction).update(cash_bank=cash_in_bank)
+
         return Response(status=status.HTTP_204_NO_CONTENT)
