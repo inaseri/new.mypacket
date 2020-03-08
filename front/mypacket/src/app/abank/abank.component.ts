@@ -24,7 +24,6 @@ export class AbankComponent implements OnInit {
   }
 
   submitForm() {
-    console.log('owner/cash/name is:', this.data.owner, this.data.cash_bank, this.data.name_bank);
     this.apiService.createBank(this.data).subscribe((response) => {
       this.router.navigate(['lBanks/']);
     });

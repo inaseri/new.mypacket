@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cee66063-9800-4c66-ac92-d51074e8fa09" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/ngsw-config.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-128x128.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-144x144.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-152x152.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-192x192.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-384x384.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-512x512.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-72x72.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-96x96.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/manifest.webmanifest" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/back/mypacket/db.sqlite3" afterPath="$PROJECT_DIR$/back/mypacket/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/back/mypacket/money/views.py" afterPath="$PROJECT_DIR$/back/mypacket/money/views.py" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/package-lock.json" afterPath="$PROJECT_DIR$/front/mypacket/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/package.json" afterPath="$PROJECT_DIR$/front/mypacket/package.json" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/addtransaction/addtransaction.component.html" afterPath="$PROJECT_DIR$/front/mypacket/src/app/addtransaction/addtransaction.component.html" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/lbanks/lbanks.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/lbanks/lbanks.component.ts" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.html" afterPath="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.html" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.scss" afterPath="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.scss" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.html" afterPath="$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.html" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/debits/debits.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/debits/debits.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/demands/demands.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/demands/demands.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/incomes/incomes.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/incomes/incomes.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/jalali.pipe.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,25 +31,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="report.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/report/report.component.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="manifest.webmanifest" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/mypacket/src/manifest.webmanifest">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="761">
+              <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/report/report.component.ts">
+      <file leaf-file-name="change-transaction.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="46" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="462">
+              <caret line="21" column="113" lean-forward="false" selection-start-line="21" selection-start-column="113" selection-end-line="21" selection-end-column="113" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,7 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/models/user.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/header/header.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/sidemenu/sidemenu.component.spec.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/app.component.html" />
@@ -82,25 +90,18 @@
         <option value="$PROJECT_DIR$/front/mypacket/src/app/services/api.service.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.scss" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/models/persian-calendar-service.ts" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/addexpence/addexpence.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/adddemand/adddemand.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/adddemand/adddemand.component.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/adddebit/adddebit.component.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/adddebit/adddebit.component.html" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/incomes/incomes.component.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/lbanks/lbanks.component.html" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/demands/demands.component.ts" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.ts" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/debits/debits.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/demands/demands.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/incomes/incomes.component.html" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/debits/debits.component.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/lbanks/lbanks.component.ts" />
         <option value="$PROJECT_DIR$/back/mypacket/money/views.py" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.html" />
@@ -112,6 +113,14 @@
         <option value="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.scss" />
         <option value="$PROJECT_DIR$/front/mypacket/src/styles.scss" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/addtransaction/addtransaction.component.html" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/debits/debits.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/demands/demands.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/incomes/incomes.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/manifest.webmanifest" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.html" />
       </list>
     </option>
   </component>
@@ -145,6 +154,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,13 +206,29 @@
               <item name="mypacket" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="change-transaction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new.mypacket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new.mypacket" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="mypacket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new.mypacket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new.mypacket" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="mypacket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,6 +239,11 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/front/mypacket/node_modules/tslint" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front/mypacket/src/assets/icons" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -274,7 +305,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -287,10 +318,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -299,8 +331,8 @@
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,45 +359,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../myPacket/money/templates/money/addBank.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="86" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="88" lean-forward="false" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/adddemand/adddemand.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/adddemand/adddemand.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/adddebit/adddebit.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -376,14 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/incomes/incomes.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/lbanks/lbanks.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -391,33 +380,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/demands/demands.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="75" lean-forward="false" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -460,14 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/debits/debits.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="39" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/lbanks/lbanks.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
@@ -480,7 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -488,7 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,7 +453,7 @@
         <state relative-caret-position="385">
           <caret line="178" column="68" lean-forward="false" selection-start-line="178" selection-start-column="68" selection-end-line="178" selection-end-column="68" />
           <folding>
-            <element signature="e#23#66#0" expanded="true" />
+            <element signature="e#23#66#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -506,7 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="193" column="47" lean-forward="false" selection-start-line="193" selection-start-column="41" selection-end-line="193" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -524,7 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="0" column="5438" lean-forward="false" selection-start-line="0" selection-start-column="5423" selection-end-line="0" selection-end-column="5438" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -535,7 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="0" column="118248" lean-forward="false" selection-start-line="0" selection-start-column="118233" selection-end-line="0" selection-end-column="118248" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -543,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
           <caret line="0" column="29079" lean-forward="false" selection-start-line="0" selection-start-column="29079" selection-end-line="0" selection-end-column="29079" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,7 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -562,7 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="856">
           <caret line="0" column="67199" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -570,9 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,7 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,7 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,7 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -604,9 +548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-584">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,9 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#61#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,9 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -634,9 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-518">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,9 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="1790" column="17" lean-forward="false" selection-start-line="1790" selection-start-column="14" selection-end-line="1790" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#293#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="0" column="118679" lean-forward="true" selection-start-line="0" selection-start-column="118671" selection-end-line="0" selection-end-column="118684" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,9 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -686,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,9 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,9 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,9 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,19 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/report/report.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="46" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,6 +659,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/incomes/incomes.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/demands/demands.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/debits/debits.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/report/report.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="99" column="45" lean-forward="false" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/ngsw-config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/assets/icons/icon-72x72.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/jalali.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/manifest.webmanifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/change-transaction/change-transaction.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="113" lean-forward="false" selection-start-line="21" selection-start-column="113" selection-end-line="21" selection-end-column="113" />
           <folding />
         </state>
       </provider>

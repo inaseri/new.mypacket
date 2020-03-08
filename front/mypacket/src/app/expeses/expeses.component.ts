@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../services/api.service";
 
+declare const require: any;
+
 @Component({
   selector: 'app-expeses',
   templateUrl: './expeses.component.html',
@@ -22,24 +24,25 @@ export class ExpesesComponent implements OnInit {
 
   getAllTransactions() {
     this.apiService.getTransactionsList(this.type).subscribe(response => {
-      var jalaali = require('jalaali-js');
-
-      for (let dates of response) {
-        var inDate = dates.date.toString();
-        var inDateFormated = inDate.slice('T', -10);
-        var inYear = inDateFormated.substr(0, 4);
-        var inMonth = inDateFormated.substr(6,1);
-        var inDay = inDateFormated.substr(8, 7);
-        var jalaliNewDate = jalaali.toJalaali(Number(inYear), Number(inMonth), Number(inDay));
-        var jaliDateStr = jalaliNewDate.jy.toString() + "/" + jalaliNewDate.jm.toString() + "/" + jalaliNewDate.jd.toString();
-        dates.date = jaliDateStr;
+      const jalaali = require('jalaali-js');
+      for (const key in response) {
+          // check if the property/key is defined in the object itself, not in parent
+          if (response.hasOwnProperty(key)) {
+              const inDate = response[key].date.toString();
+              const inDateFormated = inDate.slice('T', -10);
+              const inYear = inDateFormated.substr(0, 4);
+              const inMonth = inDateFormated.substr(6,1);
+              const inDay = inDateFormated.substr(8, 7);
+              const jalaliNewDate = jalaali.toJalaali(Number(inYear), Number(inMonth), Number(inDay));
+              const string2 = jalaliNewDate.jy.toString() + "/" + jalaliNewDate.jm.toString() + "/" + jalaliNewDate.jd.toString();
+              response[key].date = string2;
+          }
       }
       this.transactionsData = response;
     });
   }
 
   delete(item) {
-    //Delete item in Bank data
     this.apiService.deleteTransactions(item.id).subscribe(Response => {
       this.getAllTransactions();
     });
