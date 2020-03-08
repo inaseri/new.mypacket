@@ -1,6 +1,6 @@
 {
-  "name": "جیب من",
-  "short_name": "جیب من",
+  "name": "My Packet",
+  "short_name": "My Packet",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

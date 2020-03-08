@@ -31,6 +31,8 @@ import { RegisterComponent } from './register/register.component';
 import { ChangeBankComponent } from './change-bank/change-bank.component';
 import { ChangeTransactionComponent } from './change-transaction/change-transaction.component';
 
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -79,7 +81,8 @@ const routes: Routes = [
     FormsModule,
     [RouterModule.forRoot(routes)],
     DpDatePickerModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -106,5 +106,7 @@ export class SidemenuComponent implements OnInit {
     localStorage.removeItem('user_id');
     localStorage.clear();
     this.apiService.isUserLoggedIn = false;
+    // reload page after logout
+    window.location.assign('/');
   }
 }
