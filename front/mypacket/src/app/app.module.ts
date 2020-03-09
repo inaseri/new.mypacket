@@ -5,11 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { Auth } from "./auth";
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 
-import {DpDatePickerModule} from 'ng2-jalali-date-picker';
+import { DpDatePickerModule } from 'ng2-jalali-date-picker';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -36,20 +37,20 @@ import { environment } from '../environments/environment';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'aIncome/:type', component: AddtransactionComponent,  },
-  { path: 'aExpense/:type', component: AddexpenceComponent },
-  { path: 'aDebit/:type', component: AdddebitComponent },
-  { path: 'aDemand/:type', component: AdddemandComponent },
-  { path: 'lIncomes/:type', component: IncomesComponent },
-  { path: 'lExpenses/:type', component: ExpesesComponent },
-  { path: 'lDebits/:type', component: DebitsComponent },
-  { path: 'lDemands/:type', component: DemandsComponent },
-  { path: 'lBanks', component: LbanksComponent },
-  { path: 'aBank', component: AbankComponent },
+  { path: 'aIncome/:type', component: AddtransactionComponent, canActivate: [Auth] },
+  { path: 'aExpense/:type', component: AddexpenceComponent, canActivate: [Auth] },
+  { path: 'aDebit/:type', component: AdddebitComponent, canActivate: [Auth] },
+  { path: 'aDemand/:type', component: AdddemandComponent, canActivate: [Auth] },
+  { path: 'lIncomes/:type', component: IncomesComponent, canActivate: [Auth] },
+  { path: 'lExpenses/:type', component: ExpesesComponent, canActivate: [Auth] },
+  { path: 'lDebits/:type', component: DebitsComponent, canActivate: [Auth] },
+  { path: 'lDemands/:type', component: DemandsComponent, canActivate: [Auth] },
+  { path: 'lBanks', component: LbanksComponent, canActivate: [Auth] },
+  { path: 'aBank', component: AbankComponent, canActivate: [Auth] },
   { path: 'register', component: RegisterComponent },
-  { path: 'report', component: ReportComponent },
-  { path: 'changeBank/:id', component: ChangeBankComponent },
-  { path: 'changeTransaction/:id', component: ChangeTransactionComponent }
+  { path: 'report', component: ReportComponent, canActivate: [Auth] },
+  { path: 'changeBank/:id', component: ChangeBankComponent, canActivate: [Auth] },
+  { path: 'changeTransaction/:id', component: ChangeTransactionComponent, canActivate: [Auth] }
 ];
 
 @NgModule({

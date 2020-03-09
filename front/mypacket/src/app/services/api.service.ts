@@ -39,6 +39,7 @@ export class ApiService {
       console.error(
         `Backend returned code ${error.status}, ` +
         `body was: ${error.error}`);
+        alert('نام کاربری یا رمز عبور خود را اشتباه وارد کرده اید.');
     }
     // return an observable with a user-facing error message
     return throwError(
@@ -52,7 +53,7 @@ export class ApiService {
     .post<User>(this.base_path + 'login/', JSON.stringify(item), this.httpOptions)
     .pipe(
       retry(2),
-      catchError(this.handleError)
+      catchError(this.handleError),
     );
   }
 
