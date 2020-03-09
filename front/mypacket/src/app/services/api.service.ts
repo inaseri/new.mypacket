@@ -56,6 +56,15 @@ export class ApiService {
     );
   }
 
+  register(item): Observable<User> {
+    return this.http
+    .post<User>(this.base_path + 'register/', JSON.stringify(item), this.httpOptions)
+    .pipe(
+    retry(2),
+    catchError(this.handleError)
+    );
+  }
+
   createBank(item): Observable<Banks> {
     return this.http
     .post<Banks>(this.base_path + 'banks/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
@@ -66,9 +75,9 @@ export class ApiService {
   }
 
 
-  getList(): Observable<Banks> {
+  getList(owner): Observable<Banks> {
     return this.http
-    .get<Banks>(this.base_path + 'banks/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Banks>(this.base_path + 'banks/' + owner + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)

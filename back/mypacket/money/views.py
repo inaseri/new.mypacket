@@ -57,6 +57,8 @@ def create_auth(request):
         user = User.objects.create(
             username=request.data.get('email'),
             email=request.data.get('email'),
+            first_name=request.data.get('first_name'),
+            last_name=request.data.get('last_name'),
         )
         user.set_password(str(request.data.get('password')))
         user.save()
@@ -66,12 +68,13 @@ def create_auth(request):
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
-def bank_list(request, format=None):
+def bank_list(request, owner):
     """
-    List all code banks, or create a new snippet.
+    List all code banks, or create a new bank.
     """
     if request.method == 'GET':
-        banks = Bank.objects.all()
+        print("owner is:", owner)
+        banks = Bank.objects.filter(owner=owner)
         serializer = BankSerializer(banks, many=True)
         return Response(serializer.data)
 

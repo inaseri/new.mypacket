@@ -10,43 +10,42 @@
           </h5>
         </mdb-card-header>
         <mdb-card-body class="px-lg-5 pt-0">
-          <form class="text-center" style="color: #757575;">
+          <div class="text-center" style="color: #757575;">
             <div class="form-row">
               <div class="col">
                 <!-- First name -->
                 <div class="md-form">
-                  <input type="text" id="materialRegisterFormFirstName" class="form-control" mdbInput>
+                  <input type="text" id="materialRegisterFormFirstName" class="form-control" mdbInput  [(ngModel)]="data.first_name">
                   <label for="materialRegisterFormFirstName">نام</label>
                 </div>
               </div>
               <div class="col">
                 <!-- Last name -->
                 <div class="md-form">
-                  <input type="email" id="materialRegisterFormLastName" class="form-control" mdbInput>
+                  <input type="email" id="materialRegisterFormLastName" class="form-control" mdbInput [(ngModel)]="data.last_name">
                   <label for="materialRegisterFormLastName">نام خانوادگی</label>
                 </div>
               </div>
             </div>
             <!-- E-mail -->
             <div class="md-form mt-0">
-              <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInput>
+              <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInput [(ngModel)]="data.email">
               <label for="materialRegisterFormEmail">آدرس ایمیل</label>
             </div>
 
             <!-- Password -->
             <div class="md-form">
               <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
-                mdbInput>
+                mdbInput [(ngModel)]="data.password">
               <label for="materialRegisterFormPassword">رمز عبور</label>
               <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
                 حداقل ۸ کاراکتر به همراه یک حرف انگلیسی
               </small>
             </div>
-            <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
-              type="submit">ثبت نام</button>
+            <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect (click)="registerForm()" type="submit">ثبت نام</button>
             <hr>
             <span style="text-align: center; alignment: center">اگر ثبت نام کرده اید <a [routerLink]="[ '/']"> از اینجا </a> وارد شوید</span>
-          </form>
+          </div>
         </mdb-card-body>
 
       </mdb-card>
