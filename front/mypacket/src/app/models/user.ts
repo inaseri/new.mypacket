@@ -5,5 +5,5 @@ export class User {
   token: string;
   id: number;
   first_name: string;
-  lastName: string;
+  last_name: string;
 }
