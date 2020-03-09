@@ -25,7 +25,7 @@ export class AbankComponent implements OnInit {
 
   submitForm() {
     this.apiService.createBank(this.data).subscribe((response) => {
-      this.router.navigate(['lBanks/']);
+      this.router.navigate(['lBanks']);
     });
 
   }

@@ -22,7 +22,7 @@ export class LbanksComponent implements OnInit {
 
   //Get saved list of Banks
   getAllBanks() {
-    this.apiService.getList(localStorage.getItem('user_id')).subscribe(response => {
+    this.apiService.getList().subscribe(response => {
       this.banksData = response;
     });
   }

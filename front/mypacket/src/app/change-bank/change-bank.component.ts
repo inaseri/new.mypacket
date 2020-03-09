@@ -25,7 +25,6 @@ export class ChangeBankComponent implements OnInit {
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params["id"];
     this.apiService.getBaknItem(this.id).subscribe(response => {
-      console.log('Cash bank was:', response.cash_bank);
       this.data = response;
     });
   }

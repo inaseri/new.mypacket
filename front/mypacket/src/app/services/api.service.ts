@@ -67,7 +67,7 @@ export class ApiService {
 
   createBank(item): Observable<Banks> {
     return this.http
-    .post<Banks>(this.base_path + 'banks/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .post<Banks>(this.base_path + 'banks/' + localStorage.getItem('user_id') + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -75,9 +75,9 @@ export class ApiService {
   }
 
 
-  getList(owner): Observable<Banks> {
+  getList(): Observable<Banks> {
     return this.http
-    .get<Banks>(this.base_path + 'banks/' + owner + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Banks>(this.base_path + 'banks/' + localStorage.getItem('user_id') + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -86,7 +86,7 @@ export class ApiService {
 
   deleteBank(id) {
     return this.http
-    .delete<Banks>(this.base_path + 'banks/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .delete<Banks>(this.base_path + 'bank/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -96,7 +96,7 @@ export class ApiService {
   // Update bank data
   updateBank(id, item): Observable<Banks> {
     return this.http
-    .put<Banks>(this.base_path + 'banks/' + id + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .put<Banks>(this.base_path + 'bank/' + id + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -105,7 +105,7 @@ export class ApiService {
 
   getBaknItem(id): Observable<Banks> {
     return this.http
-    .get<Banks>(this.base_path + 'banks/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Banks>(this.base_path + 'bank/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -119,7 +119,7 @@ export class ApiService {
 
   createTransaction(item, type): Observable<Transactoin> {
     return this.http
-    .post<Transactoin>(this.base_path + 'transactions/' + type + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .post<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -128,7 +128,7 @@ export class ApiService {
 
   getTransactionsList(type): Observable<Transactoin> {
     return this.http
-    .get<Transactoin>(this.base_path + 'transactions/' + type + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)

@@ -89,6 +89,7 @@ def bank_list(request, owner):
 @csrf_exempt
 @api_view(['GET', 'PUT', 'DELETE'])
 def bank_detail(request, pk):
+    print("in delete def")
     """
     Retrieve, update or delete a code snippet.
     """
@@ -115,12 +116,12 @@ def bank_detail(request, pk):
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
-def transactions_list(request, type):
+def transactions_list(request, type, owner):
     """
     List all code banks, or create a new snippet.
     """
     if request.method == 'GET':
-        transaction = Transaction.objects.all().filter(type=type)
+        transaction = Transaction.objects.filter(type=type, owner=owner)
         serializer = TransactionSerializer(transaction, many=True)
         return Response(serializer.data)
 
@@ -129,7 +130,7 @@ def transactions_list(request, type):
         if serializer.is_valid():
 
             # use this line to get bank from serializer
-            bank = Bank.objects.filter(name_bank=serializer.validated_data['source'])
+            bank = Bank.objects.filter(name_bank=serializer.validated_data['source'], owner=serializer.validated_data['owner'])
 
             # the below line use for get cash from the transaction
             cash = serializer.validated_data['cash']
@@ -143,7 +144,7 @@ def transactions_list(request, type):
             else:
                 cash = cash_in_bnak - cash
 
-            Bank.objects.filter(name_bank=serializer.validated_data['source']).update(cash_bank=cash)
+            Bank.objects.filter(name_bank=serializer.validated_data['source'], owner=serializer.validated_data['owner']).update(cash_bank=cash)
 
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -173,8 +174,6 @@ def transaction_detail(request, pk):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
-        # the below line use for delete api
-        transaction.delete()
 
         # the below line use for get detail of transaction
         transaction2 = Transaction.objects.filter(id=pk)
@@ -185,17 +184,21 @@ def transaction_detail(request, pk):
             type_transaction = select_item.type
             cash_transaction = select_item.cash
             source_transaction = select_item.source
+            owner_transaction = select_item.owner
 
-            bank = Bank.objects.filter(name_bank=source_transaction)
+            bank = Bank.objects.filter(name_bank=source_transaction, owner=owner_transaction)
 
-            for selectedBank in bank:
-                cash_in_bank = selectedBank.cash_bank
+            for selected_bank in bank:
+                cash_in_bank = selected_bank.cash_bank
 
             if type_transaction == 1 or type_transaction == 4:
                 cash_in_bank = cash_in_bank - cash_transaction
             else:
                 cash_in_bank = cash_in_bank + cash_transaction
 
-            Bank.objects.filter(name_bank=source_transaction).update(cash_bank=cash_in_bank)
+            Bank.objects.filter(name_bank=source_transaction, owner=owner_transaction).update(cash_bank=cash_in_bank)
+
+            # the below line use for delete api
+            transaction.delete()
 
         return Response(status=status.HTTP_204_NO_CONTENT)
