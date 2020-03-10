@@ -124,7 +124,7 @@ DATABASES = {
  'default': {
      'ENGINE': 'django.db.backends.mysql',
      'NAME': 'inaseri_a.jibeman',
-     'USER': 'inaseri_a.jibeman',
+     'USER': 'inaseri_ajibeman',
      'PASSWORD': 'Iman.3802',
      'HOST': '127.0.0.1',
      'PORT': '',
