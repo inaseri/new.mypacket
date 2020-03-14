@@ -13,7 +13,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class ApiService {
 
   // API path
-  base_path = 'http://127.0.0.1:8000/api/';
+  base_path = 'https://new.jibeman.inaseri.ir/api/';
   token = 'token';
   public user = localStorage.getItem('user_id');
   public isUserLoggedIn: boolean;
