@@ -36,7 +36,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: LoginComponent},
   { path: 'aIncome/:type', component: AddtransactionComponent, canActivate: [Auth] },
   { path: 'aExpense/:type', component: AddexpenceComponent, canActivate: [Auth] },
   { path: 'aDebit/:type', component: AdddebitComponent, canActivate: [Auth] },
