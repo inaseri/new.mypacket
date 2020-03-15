@@ -139,10 +139,10 @@ def transactions_list(request, type, owner):
                 cash_in_bnak = selected_bank.cash_bank
 
             # use the below line to change cash in bank
-            if type == 1 or type == 4:
-                cash = cash_in_bnak + cash
-            else:
+            if type == 2 or type == 4:
                 cash = cash_in_bnak - cash
+            else:
+                cash = cash_in_bnak + cash
 
             Bank.objects.filter(name_bank=serializer.validated_data['source'], owner=serializer.validated_data['owner']).update(cash_bank=cash)
 
@@ -191,10 +191,10 @@ def transaction_detail(request, pk):
             for selected_bank in bank:
                 cash_in_bank = selected_bank.cash_bank
 
-            if type_transaction == 1 or type_transaction == 4:
-                cash_in_bank = cash_in_bank - cash_transaction
-            else:
+            if type_transaction == 2 or type_transaction == 4:
                 cash_in_bank = cash_in_bank + cash_transaction
+            else:
+                cash_in_bank = cash_in_bank - cash_transaction
 
             Bank.objects.filter(name_bank=source_transaction, owner=owner_transaction).update(cash_bank=cash_in_bank)
 
