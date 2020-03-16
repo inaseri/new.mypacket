@@ -1,18 +1,30 @@
-<div class="container">
-  <div class="page-footer">
-    <div class="row">
-      <div class="colM col 3">
-        <button type="button" class="btn btn-primary btn-rounded">Primary</button>
+<mdb-navbar SideClass="page-footer font-small cyan fixed-bottom" *ngIf="show">
+    <mdb-navbar-brand>
+      <div class="container">
+        <div class="row" >
+          <div class="col-md-12">
+            <div class="flex-center">
+                <a class="nav-link" [routerLink]="[ '/report']">
+                  <i class="fas fa-home"></i>  خانه
+                </a>
+                <a class="nav-link" [routerLink]="[ '/aIncome/1']">
+                  <i class="fas fa-chart-line"></i> درآمد
+                </a>
+                <a class="nav-link" [routerLink]="[ '/aExpense/2']">
+                  <i class="fas fa-upload"></i> هزینه
+                </a>
+                <a class="nav-link" [routerLink]="[ '/aDebit/3']">
+                  <i class="fas fa-user-minus"></i> بدهی
+                </a>
+                <a class="nav-link" [routerLink]="[ '/aDemand/4']">
+                  <i class="fas fa-user-plus"></i> مطالبه
+                </a>
+                <a class="nav-link" [routerLink]="[ 'lBanks/']">
+                  <i class="fas fa-home"></i> حساب
+                </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="colM col 3">
-        <button type="button" class="btn btn-default btn-rounded">Default</button>
-      </div>
-      <div class="colM col 3">
-        <button type="button" class="btn btn-success btn-rounded">Success</button>
-      </div>
-      <div class="colM col 3">
-        <button type="button" class="btn btn-secondary btn-rounded">Secondary</button>
-      </div>
-    </div>
-  </div>
-</div>
+    </mdb-navbar-brand>
+</mdb-navbar>

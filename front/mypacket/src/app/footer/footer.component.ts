@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  public show: boolean;
+
   constructor() { }
 
   ngOnInit() {
+    // this below if use for change the menu item.
+    if (localStorage.getItem('token') != null) {
+      this.show = true;
+    } else  {
+      this.show = false;
+    }
   }
 
 }

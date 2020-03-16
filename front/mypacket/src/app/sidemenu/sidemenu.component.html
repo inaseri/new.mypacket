@@ -1,41 +1,11 @@
-
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan fixed-top" [containerInside]="false">
 
   <mdb-navbar-brand><a class="navbar-brand" [routerLink]="[ '/report']">جیب من</a></mdb-navbar-brand>
 
   <links *ngIf="show">
 
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="[ '/report']">
-          &nbsp;<i class="fas fa-home"></i>&nbsp;  خانه
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="[ '/aIncome/1']">
-          &nbsp;<i class="fas fa-chart-line"></i>&nbsp; درآمد
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="[ '/aExpense/2']">
-          &nbsp;<i class="fas fa-upload"></i>&nbsp; هزینه
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="[ '/aDebit/3']">
-          &nbsp;<i class="fas fa-user-minus"></i>&nbsp; بدهی
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="[ '/aDemand/4']">
-          &nbsp;<i class="fas fa-user-plus"></i>&nbsp; مطالبه
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="[ 'lBanks/']">
-          &nbsp;<i class="fas fa-home"></i> حساب ها
-        </a>
-      </li>
+
 
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
