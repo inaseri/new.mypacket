@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ApiService} from "../services/api.service";
+import { ApiService } from "../services/api.service";
+
 
 declare const require: any;
 
@@ -14,9 +15,11 @@ export class ReportComponent implements OnInit {
   expenseData: any;
   debitsData: any;
   demandData: any;
+  startDate: any;
+  endDate: any;
 
   constructor(
-    public apiService: ApiService
+    public apiService: ApiService,
   ) {
     this.incomesData = [];
     this.expenseData = [];
@@ -26,6 +29,23 @@ export class ReportComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getAllIncomes();
+    this.getAllExpense();
+    this.getAllDebits();
+    this.getAllDemands();
+  }
+
+
+  getDate() {
+    const startMonthStr = this.startDate.format('jYYYY/jMM/jD').toString();
+    const startMonthNumberStr = startMonthStr.substr(5, 7);
+    this.apiService.thisMonth = startMonthNumberStr.slice(0, 2);
+
+    const endMonthStr = this.endDate.format('jYYYY/jMM/jD').toString();
+    const endMonthNumberStr = endMonthStr.substr(5, 7);
+    this.apiService.nextMonth = endMonthNumberStr.slice(0, 2);
+
+    // the below lines use for update the page
     this.getAllIncomes();
     this.getAllExpense();
     this.getAllDebits();

@@ -7,13 +7,13 @@
       </button>
     </div>
     <div class="col-md-3">
-      <dp-date-picker dir="rtl" mode="day" placeholder="تاریخ شروع" theme="dp-material" class="new-dp" style="margin-top: 10px; width: 100%"></dp-date-picker>
+      <dp-date-picker dir="rtl" mode="day" placeholder="تاریخ شروع" theme="dp-material" class="new-dp" [(ngModel)]="startDate" style="margin-top: 10px; width: 100%"></dp-date-picker>
     </div>
     <div class="col-md-3">
-      <dp-date-picker dir="rtl" mode="day" placeholder="تاریخ پایان" theme="dp-material" class="new-dp" style="margin-top: 10px;"></dp-date-picker>
+      <dp-date-picker dir="rtl" mode="day" placeholder="تاریخ پایان" theme="dp-material" class="new-dp" [(ngModel)]="endDate" style="margin-top: 10px;"></dp-date-picker>
     </div>
     <div class="col-md-3">
-      <button type="button" class="btn btn-primary" style="margin-top: 10px; width: 100%;">
+      <button type="button" class="btn btn-primary" (click)="getDate()" style="margin-top: 10px; width: 100%;">
         <i class="fas fa-filter"></i>
         ثبت بازه
       </button>

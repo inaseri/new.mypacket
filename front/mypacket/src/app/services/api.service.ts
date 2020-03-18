@@ -3,8 +3,11 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { User } from '../models/user';
 import { Banks } from '../models/banks';
 import { Transactoin } from "../models/transactoin";
-import { Observable, pipe, throwError} from 'rxjs';
+import { Observable, throwError} from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { DatePipe } from '@angular/common';
+
+declare const require: any;
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +16,22 @@ import { retry, catchError } from 'rxjs/operators';
 export class ApiService {
 
   // API path
-  base_path = 'https://new.jibeman.inaseri.ir/api/';
+  base_path = 'http://127.0.0.1:8000/api/';
+  thisMonth: any;
+  nextMonth: any;
+
   token = 'token';
+  myDate = new Date();
+
   public user = localStorage.getItem('user_id');
   public isUserLoggedIn: boolean;
 
   constructor(private http: HttpClient) {
+      const jalaali = require('jalaali-js');
+
+      this.thisMonth = jalaali.toJalaali(this.myDate);
+      this.thisMonth = this.thisMonth.jm;
+      this.nextMonth = Number(this.thisMonth) + 1;
   }
 
   // Http Options
@@ -120,7 +133,7 @@ export class ApiService {
 
   createTransaction(item, type): Observable<Transactoin> {
     return this.http
-    .post<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .post<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/' + this.thisMonth + '/' + this.nextMonth + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -129,7 +142,7 @@ export class ApiService {
 
   getTransactionsList(type): Observable<Transactoin> {
     return this.http
-    .get<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/' + this.thisMonth + '/' + this.nextMonth + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)

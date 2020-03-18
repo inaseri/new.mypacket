@@ -14,7 +14,10 @@ declare const require: any;
 export class DebitsComponent implements OnInit {
 
   transactionsData: any;
+  startDate: any;
+  endDate: any;
   type = 3;
+
   constructor(
     public apiService: ApiService
   ) {
@@ -22,6 +25,19 @@ export class DebitsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getAllTransactions();
+  }
+
+  getDate() {
+    const startMonthStr = this.startDate.format('jYYYY/jMM/jD').toString();
+    const startMonthNumberStr = startMonthStr.substr(5, 7);
+    this.apiService.thisMonth = startMonthNumberStr.slice(0, 2);
+
+    const endMonthStr = this.endDate.format('jYYYY/jMM/jD').toString();
+    const endMonthNumberStr = endMonthStr.substr(5, 7);
+    this.apiService.nextMonth = endMonthNumberStr.slice(0, 2);
+
+    // the below lines use for update the page
     this.getAllTransactions();
   }
 

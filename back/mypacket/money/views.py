@@ -23,6 +23,10 @@ from .serializers import BankSerializer, TransactionSerializer
 # model imports
 from .models import Transaction, Bank
 
+# date time and jalali date time import
+from datetime import datetime
+import jdatetime
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -116,12 +120,28 @@ def bank_detail(request, pk):
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
-def transactions_list(request, type, owner):
+def transactions_list(request, type, owner, thisMonth, nextMonth):
     """
-    List all code banks, or create a new snippet.
+    List all code banks, or create a new transaction.
     """
+    year_number = jdatetime.date.today().year
+    # this two lines calculate start and end of month
+    first_day_this_month = jdatetime.datetime(year_number, thisMonth, 1,00,00,00)
+    if nextMonth > 12:
+        first_day_next_month = jdatetime.datetime(year_number, nextMonth - 1, 29,00,00,00)
+    else:
+        first_day_next_month = jdatetime.datetime(year_number, nextMonth, 1,00,00,00)
+
+    # this two lines convert persian date to gregorian date and time
+    first_day_this_month = first_day_this_month.togregorian()
+    first_day_next_month = first_day_next_month.togregorian()
+
+    # this two lines convert date time to date
+    first_day_this_month = datetime.date(first_day_this_month)
+    first_day_next_month = datetime.date(first_day_next_month)
+
     if request.method == 'GET':
-        transaction = Transaction.objects.filter(type=type, owner=owner)
+        transaction = Transaction.objects.filter(type=type, owner=owner, date__range=[first_day_this_month, first_day_next_month])
         serializer = TransactionSerializer(transaction, many=True)
         return Response(serializer.data)
 
