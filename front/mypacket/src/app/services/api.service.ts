@@ -16,7 +16,7 @@ declare const require: any;
 export class ApiService {
 
   // API path
-  base_path = 'http://127.0.0.1:8000/api/';
+  base_path = 'https://new.jibeman.inaseri.ir/api/';
   thisMonth: any;
   nextMonth: any;
 

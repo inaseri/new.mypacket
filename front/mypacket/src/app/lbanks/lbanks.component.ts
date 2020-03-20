@@ -10,11 +10,18 @@ export class LbanksComponent implements OnInit {
 
   banksData: any;
 
+  public doughnutChartType = 'doughnut';
+  public doughnutChartLabels = [];
+  public doughnutChartData = [];
+
   constructor(
     public apiService: ApiService
   ) {
     this.banksData = [];
   }
+
+
+
 
   ngOnInit() {
     this.getAllBanks();
@@ -24,6 +31,14 @@ export class LbanksComponent implements OnInit {
   getAllBanks() {
     this.apiService.getList().subscribe(response => {
       this.banksData = response;
+      const arrOfLabels = [];
+      const arrOfValues = [];
+      for (const key1 in this.banksData) {
+        arrOfLabels.push(this.banksData[key1].name_bank);
+        arrOfValues.push(this.banksData[key1].cash_bank);
+      }
+      this.doughnutChartLabels = arrOfLabels;
+      this.doughnutChartData = arrOfValues;
     });
   }
 
