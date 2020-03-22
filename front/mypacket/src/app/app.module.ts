@@ -31,9 +31,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ChangeBankComponent } from './change-bank/change-bank.component';
 import { ChangeTransactionComponent } from './change-transaction/change-transaction.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { RestpasswordformComponent } from './restpasswordform/restpasswordform.component';
+
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -50,7 +54,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'report', component: ReportComponent, canActivate: [Auth] },
   { path: 'changeBank/:id', component: ChangeBankComponent, canActivate: [Auth] },
-  { path: 'changeTransaction/:id', component: ChangeTransactionComponent, canActivate: [Auth] }
+  { path: 'changeTransaction/:id', component: ChangeTransactionComponent, canActivate: [Auth] },
+  { path: 'forget_password', component: ResetpasswordComponent},
+  { path: 'reset_form', component: RestpasswordformComponent }
 ];
 
 @NgModule({
@@ -73,7 +79,9 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     ChangeBankComponent,
-    ChangeTransactionComponent
+    ChangeTransactionComponent,
+    ResetpasswordComponent,
+    RestpasswordformComponent
   ],
   imports: [
     BrowserModule,

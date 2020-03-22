@@ -27,6 +27,11 @@ from .models import Transaction, Bank
 from datetime import datetime
 import jdatetime
 
+from django.dispatch import receiver
+from django_rest_passwordreset.signals import reset_password_token_created
+from django.template.loader import render_to_string
+from django.core.mail import EmailMultiAlternatives
+from django_rest_passwordreset import tokens
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -46,7 +51,6 @@ def login(request):
         return Response({'error': 'Please provide both username and password'},
                         status=HTTP_400_BAD_REQUEST)
     user = authenticate(username=username, password=password)
-    print("use is;", user)
     if not user:
         return Response({'error': 'Invalid Credentials'},
                         status=HTTP_404_NOT_FOUND)
@@ -70,6 +74,72 @@ def create_auth(request):
     # return JsonResponse(serializer.errors, status=400)
 
 
+@receiver(reset_password_token_created)
+def password_reset_token_created(sender, reset_password_token, *args, **kwargs):
+    """
+    Handles password reset tokens
+    When a token is created, an e-mail needs to be sent to the user
+    :param sender:
+    :param reset_password_token:
+    :param args:
+    :param kwargs:
+    :return:
+    """
+    # send an e-mail to the user
+    context = {
+        'current_user': reset_password_token.user,
+        'username': reset_password_token.user.username,
+        'email': reset_password_token.user.email,
+        # ToDo: The URL can (and should) be constructed using pythons built-in `reverse` method.
+        'reset_password_url': "https://a.jibeman.inaseri.ir/reset_form",
+        'token': reset_password_token.key
+    }
+
+    # render email text
+    email_html_message = render_to_string('money/user_reset_password.html', context)
+    email_plaintext_message = render_to_string('money/user_reset_password.txt', context)
+
+    msg = EmailMultiAlternatives(
+        # title:
+        ("بازیابی مجدد رمز عبور {title}".format(title="برای وب اپلیکیشن جیب من")),
+        # message:
+        email_plaintext_message,
+        # from:
+        "jibeman@inaseri.ir",
+        # to:
+        [reset_password_token.user.email]
+    )
+
+    # the 4 below lines use for update the token
+    userID = User.objects.filter(username=context['username']).values('id')
+    for ids in userID:
+        userID = ids
+    Token.objects.filter(user=str(userID['id'])).update(key=context['token'])
+
+    msg.attach_alternative(email_html_message, "text/html")
+    msg.send()
+
+
+@csrf_exempt
+@api_view(["POST"])
+@permission_classes((AllowAny,))
+def resetPassword(request):
+    newPassword = request.data.get("password")
+    newToken = request.data.get("token")
+    if Token.objects.get(key=str(newToken)) is None:
+        print("not updated password")
+    else:
+        userID = Token.objects.filter(key=str(newToken)).values('user')
+        for ids in userID:
+            userID = ids
+        userID = userID['user']
+        user = User.objects.get(pk=userID)
+        print("user is:", user)
+        user.set_password(str(newPassword))
+        user.save()
+        return Response({"status": "success", "response": "Password Successfully Updated"}, status=status.HTTP_202_ACCEPTED)
+    return Response({"status": "not success", "response": "Password Dont Reset, There Is Some Problems"}, status=status.HTTP_406_NOT_ACCEPTABLE)
+
 @csrf_exempt
 @api_view(['GET', 'POST'])
 def bank_list(request, owner):
@@ -77,7 +147,6 @@ def bank_list(request, owner):
     List all code banks, or create a new bank.
     """
     if request.method == 'GET':
-        print("owner is:", owner)
         banks = Bank.objects.filter(owner=owner)
         serializer = BankSerializer(banks, many=True)
         return Response(serializer.data)
