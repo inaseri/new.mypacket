@@ -3,11 +3,14 @@ import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
 import { Banks } from '../models/banks';
 
+declare const $: any;
+
 @Component({
   selector: 'app-abank',
   templateUrl: './abank.component.html',
   styleUrls: ['./abank.component.scss']
 })
+
 export class AbankComponent implements OnInit {
 
   data: Banks;
@@ -21,6 +24,18 @@ export class AbankComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('input.number').keyup(function(event) {
+      // skip for arrow keys
+      if(event.which >= 37 && event.which <= 40) return;
+
+      // format number
+      $(this).val(function(index, value) {
+        return value
+        .replace(/\D/g, "")
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        ;
+      });
+    });
   }
 
   submitForm() {

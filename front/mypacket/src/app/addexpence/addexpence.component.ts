@@ -3,6 +3,8 @@ import {Router} from "@angular/router";
 import {Transactoin} from "../models/transactoin";
 import {ApiService} from "../services/api.service";
 
+declare const $: any;
+
 @Component({
   selector: 'app-addexpence',
   templateUrl: './addexpence.component.html',
@@ -24,6 +26,18 @@ export class AddexpenceComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('input.number').keyup(function(event) {
+      // skip for arrow keys
+      if(event.which >= 37 && event.which <= 40) return;
+
+      // format number
+      $(this).val(function(index, value) {
+        return value
+        .replace(/\D/g, "")
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        ;
+      });
+    });
     this.getAllBanks();
   }
 
