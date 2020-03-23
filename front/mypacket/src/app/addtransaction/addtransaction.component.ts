@@ -43,7 +43,7 @@ export class AddtransactionComponent implements OnInit {
   }
 
   submitForm() {
-    let cash = this.data.cash;
+    let cash = this.data.cash.toString();
     cash = cash.toString().replace(',','');
     this.data.cash = Number(cash);
     this.apiService.createTransaction(this.data, this.typeOfTransaction).subscribe((response) => {
