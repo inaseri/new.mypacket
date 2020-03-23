@@ -43,6 +43,9 @@ export class AddtransactionComponent implements OnInit {
   }
 
   submitForm() {
+    let cash = this.data.cash;
+    cash = cash.toString().replace(',','');
+    this.data.cash = Number(cash);
     this.apiService.createTransaction(this.data, this.typeOfTransaction).subscribe((response) => {
       this.router.navigate(['report/']);
     });

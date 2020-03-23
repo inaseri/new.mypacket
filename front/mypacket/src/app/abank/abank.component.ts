@@ -39,6 +39,9 @@ export class AbankComponent implements OnInit {
   }
 
   submitForm() {
+    let cash = this.data.cash_bank;
+    cash = cash.toString().replace(',','');
+    this.data.cash_bank = Number(cash);
     this.apiService.createBank(this.data).subscribe((response) => {
       this.router.navigate(['lBanks']);
     });

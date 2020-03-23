@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cee66063-9800-4c66-ac92-d51074e8fa09" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/app/auth.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/mypacket/src/app/auth.ts" />
+    <list default="true" id="cee66063-9800-4c66-ac92-d51074e8fa09" name="Default" comment="رفع باگ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/app.module.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/services/api.service.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/services/api.service.ts" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/src/index.html" afterPath="$PROJECT_DIR$/front/mypacket/src/index.html" />
-      <change beforePath="$PROJECT_DIR$/front/mypacket/src/manifest.webmanifest" afterPath="$PROJECT_DIR$/front/mypacket/src/manifest.webmanifest" />
+      <change beforePath="$PROJECT_DIR$/back/mypacket/db.sqlite3" afterPath="$PROJECT_DIR$/back/mypacket/db.sqlite3" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/adddebit/adddebit.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/adddebit/adddebit.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/adddemand/adddemand.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/adddemand/adddemand.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/addexpence/addexpence.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/addexpence/addexpence.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/mypacket/src/app/addtransaction/addtransaction.component.ts" afterPath="$PROJECT_DIR$/front/mypacket/src/app/addtransaction/addtransaction.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/front/mypacket/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,20 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/login/login.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,13 +28,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/front/mypacket/src/app/lbanks/lbanks.component.ts" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/change-bank/change-bank.component.ts" />
-        <option value="$PROJECT_DIR$/back/mypacket/money/urls.py" />
-        <option value="$PROJECT_DIR$/back/mypacket/money/views.py" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/sidemenu/sidemenu.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/sidemenu/sidemenu.component.scss" />
-        <option value="$PROJECT_DIR$/front/mypacket/src/app/login/login.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/styles.scss" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/report/report.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/sidemenu/sidemenu.component.ts" />
@@ -55,8 +38,25 @@
         <option value="$PROJECT_DIR$/front/mypacket/src/index.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/manifest.webmanifest" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/auth.ts" />
+        <option value="$PROJECT_DIR$/back/mypacket/mypacket/settings.py" />
+        <option value="$PROJECT_DIR$/back/mypacket/mypacket/urls.py" />
+        <option value="$PROJECT_DIR$/back/mypacket/requirement.txt" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/login/login.component.html" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/back/mypacket/money/templates/money/user_reset_password.html" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/resetpassword/resetpassword.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/restpasswordform/restpasswordform.component.ts" />
+        <option value="$PROJECT_DIR$/back/mypacket/money/urls.py" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/resetpassword/resetpassword.component.html" />
+        <option value="$PROJECT_DIR$/back/mypacket/money/views.py" />
         <option value="$PROJECT_DIR$/front/mypacket/src/app/services/api.service.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/restpasswordform/restpasswordform.component.html" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/adddebit/adddebit.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/adddemand/adddemand.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/addexpence/addexpence.component.ts" />
+        <option value="$PROJECT_DIR$/front/mypacket/src/app/addtransaction/addtransaction.component.ts" />
       </list>
     </option>
   </component>
@@ -89,7 +89,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,13 +130,31 @@
               <item name="mypacket" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="resetpassword" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new.mypacket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new.mypacket" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="mypacket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="restpasswordform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new.mypacket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new.mypacket" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="mypacket" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -150,12 +168,12 @@
     <property name="settings.editor.selected.configurable" value="vcs.Mercurial" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front/mypacket/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/front/mypacket/src/assets/icons" />
       <recent name="$PROJECT_DIR$/front/mypacket/src/assets/fonts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/front/mypacket/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -254,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583770918784</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="افزودن ریست پسورد">
+      <created>1584917102822</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1584917102822</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -304,7 +329,8 @@
     <MESSAGE value="به روز رسانی و تغییر در ساید منو" />
     <MESSAGE value="به روز رسانی یو ای برنامه در قسمت لاگین و منو" />
     <MESSAGE value="رفع باگ" />
-    <option name="LAST_COMMIT_MESSAGE" value="رفع باگ" />
+    <MESSAGE value="افزودن ریست پسورد" />
+    <option name="LAST_COMMIT_MESSAGE" value="افزودن ریست پسورد" />
   </component>
   <component name="WindowStateProjectService">
     <state x="268" y="260" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1583765300488">
@@ -317,14 +343,96 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/front/mypacket/dist/mdb-angular-free/main-es5.00e48e031d7f38ad3a31.js" />
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts">
+    <entry file="file://$PROJECT_DIR$/../myPacket/money/templates/base.html" />
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/models/user.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        <state relative-caret-position="198">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/manifest.webmanifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="40" column="15" lean-forward="false" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/sidemenu/sidemenu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/auth.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="49" column="50" lean-forward="false" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/services/api.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="41" column="69" lean-forward="false" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/money/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="98" column="87" lean-forward="false" selection-start-line="98" selection-start-column="87" selection-end-line="98" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/money/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/money/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/dist/mdb-angular-free/main-es5.00e48e031d7f38ad3a31.js" />
     <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/lbanks/lbanks.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
@@ -346,25 +454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/mypacket/money/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/expeses/expeses.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="678">
           <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/mypacket/money/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-363">
-          <caret line="157" column="14" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -396,27 +489,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../myPacket/money/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/models/user.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../myPacket/money/templates/base.html" />
     <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/register/register.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18">
@@ -428,7 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="717">
           <caret line="40" column="15" lean-forward="false" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -436,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -444,7 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -452,34 +522,182 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/app.module.ts">
+    <entry file="file:///Library/Python/2.7/site-packages/django_rest_passwordreset/signals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="49" column="50" lean-forward="false" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
-          <folding>
-            <element signature="e#1#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/services/api.service.ts">
+    <entry file="file://$PROJECT_DIR$/back/mypacket/money/templates/money/user_reset_password.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="41" column="69" lean-forward="false" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/mypacket/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="43" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/mypacket/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/money/templates/money/user_reset_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="25" column="76" lean-forward="false" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="58" column="21" lean-forward="false" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/auth.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/models/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/resetpassword/resetpassword.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="17" column="69" lean-forward="false" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/resetpassword/resetpassword.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
-          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/restpasswordform/restpasswordform.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/money/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="93" column="36" lean-forward="false" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/services/api.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/restpasswordform/restpasswordform.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/requirement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/mypacket/money/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/abank/abank.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="43" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/adddebit/adddebit.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="46" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/adddemand/adddemand.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/addexpence/addexpence.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/mypacket/src/app/addtransaction/addtransaction.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
