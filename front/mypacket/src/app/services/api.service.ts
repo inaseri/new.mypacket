@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { User } from '../models/user';
 import { Banks } from '../models/banks';
-import { Transactoin } from "../models/transactoin";
+import { Transactoin } from '../models/transactoin';
 import { Observable, throwError} from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { DatePipe } from '@angular/common';
+import {BankToBank} from '../models/bank-to-bank';
 
 declare const require: any;
 
@@ -100,7 +101,7 @@ export class ApiService {
 
   createBank(item): Observable<Banks> {
     return this.http
-    .post<Banks>(this.base_path + 'banks/' + localStorage.getItem('user_id') + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .post<Banks>(this.base_path + 'banks/' + localStorage.getItem('user_id') + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -110,7 +111,7 @@ export class ApiService {
 
   getList(): Observable<Banks> {
     return this.http
-    .get<Banks>(this.base_path + 'banks/' + localStorage.getItem('user_id') + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Banks>(this.base_path + 'banks/' + localStorage.getItem('user_id') + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -119,7 +120,7 @@ export class ApiService {
 
   deleteBank(id) {
     return this.http
-    .delete<Banks>(this.base_path + 'bank/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .delete<Banks>(this.base_path + 'bank/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -129,7 +130,7 @@ export class ApiService {
   // Update bank data
   updateBank(id, item): Observable<Banks> {
     return this.http
-    .put<Banks>(this.base_path + 'bank/' + id + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .put<Banks>(this.base_path + 'bank/' + id + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -138,11 +139,20 @@ export class ApiService {
 
   getBaknItem(id): Observable<Banks> {
     return this.http
-    .get<Banks>(this.base_path + 'bank/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Banks>(this.base_path + 'bank/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
     );
+  }
+
+  bankToBank(item, id1 , id2): Observable<BankToBank> {
+    return this.http
+      .put<BankToBank>(this.base_path + 'bankToBank/' + id1 + '/' + id2 + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
+      .pipe(
+        retry(0),
+        catchError(this.handleError)
+      );
   }
 
 
@@ -152,7 +162,7 @@ export class ApiService {
 
   createTransaction(item, type): Observable<Transactoin> {
     return this.http
-    .post<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/' + this.thisMonth + '/' + this.nextMonth + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .post<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/' + this.thisMonth + '/' + this.nextMonth + '/', JSON.stringify(item), { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -161,7 +171,7 @@ export class ApiService {
 
   getTransactionsList(type): Observable<Transactoin> {
     return this.http
-    .get<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/' + this.thisMonth + '/' + this.nextMonth + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Transactoin>(this.base_path + 'transactions/' + type + '/' + localStorage.getItem('user_id') + '/' + this.thisMonth + '/' + this.nextMonth + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -170,7 +180,7 @@ export class ApiService {
 
   deleteTransactions(id) {
     return this.http
-    .delete<Transactoin>(this.base_path + 'edit_transactions/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .delete<Transactoin>(this.base_path + 'edit_transactions/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -179,9 +189,9 @@ export class ApiService {
 
   getTransactionItem(id): Observable<Transactoin> {
     return this.http
-    .get<Transactoin>(this.base_path + 'edit_transactions/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Token ' + localStorage.getItem('token') }) })
+    .get<Transactoin>(this.base_path + 'edit_transactions/' + id + '/', { headers: new HttpHeaders({ 'Content-Type': 'application/json', Authorization: 'Token ' + localStorage.getItem('token') }) })
     .pipe(
-      retry(2),
+      retry(0),
       catchError(this.handleError)
     );
   }

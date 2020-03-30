@@ -162,7 +162,6 @@ def bank_list(request, owner):
 @csrf_exempt
 @api_view(['GET', 'PUT', 'DELETE'])
 def bank_detail(request, pk):
-    print("in delete def")
     """
     Retrieve, update or delete a code snippet.
     """
@@ -185,6 +184,35 @@ def bank_detail(request, pk):
     elif request.method == 'DELETE':
         bank.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+@csrf_exempt
+@api_view(['PUT'])
+def bank_to_bank(request, pk1, pk2):
+    """
+    Retrieve, update or delete a code snippet.
+    """
+    bank1 = Bank.objects.filter(pk=pk1)
+    bank2 = Bank.objects.filter(pk=pk2)
+    cash = int(request.data.get("cashTo"))
+
+    for banks1 in bank1:
+        cash_in_bank_1 = int(banks1.cash_bank)
+
+    for banks2 in bank2:
+        cash_in_bank_2 = int(banks2.cash_bank)
+
+    if cash > cash_in_bank_1:
+        return Response('The Cash In Destination Is Bigger Than Source', status=status.HTTP_406_NOT_ACCEPTABLE)
+    else:
+        destination_cash_bank = cash_in_bank_1 - cash
+        final_cash_bank = cash_in_bank_2 + cash
+
+        Bank.objects.filter(pk=pk1).update(cash_bank=destination_cash_bank)
+        Bank.objects.filter(pk=pk2).update(cash_bank=final_cash_bank)
+
+        return Response('Banks Update Successfully', status=status.HTTP_200_OK)
+
+
 
 
 @csrf_exempt

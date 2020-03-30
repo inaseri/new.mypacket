@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row" style="margin-top: 70px;">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header text-center">
+          حساب به حساب
+        </div>
+        <div class="card-body">
+            <select class="custom-select form-control" style="direction: rtl" [(ngModel)]="newBankData.id1">
+              <option>حساب مبدا را انتخاب کنید</option>
+              <option *ngFor="let item of banksData" [value]="item.id" >&nbsp; نام حساب مبدا :{{item.name_bank}}</option>
+            </select>
+            <select class="custom-select form-control" style="direction: rtl; margin-top: 10px;" [(ngModel)]="newBankData.id2">
+              <option>حساب مقصد را انتخاب کنید</option>
+              <option *ngFor="let item of banksData" [value]="item.id" >&nbsp; نام حساب مقصد :{{item.name_bank}}</option>
+            </select>
+            <input [(ngModel)]="newBankData.cashTo" type="tel" step=1.0 class="form-control number" placeholder="رقم" style="text-align: center; margin-top: 10px;">
+        </div>
+        <div class="card-footer text-center">
+          <button type="button" class="btn btn-success" (click)="submitForm()">انتقال</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

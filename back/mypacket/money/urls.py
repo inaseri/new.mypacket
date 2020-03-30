@@ -5,6 +5,7 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('banks/<int:owner>/', views.bank_list),
     path('bank/<int:pk>/', views.bank_detail),
+    path('bankToBank/<int:pk1>/<int:pk2>/', views.bank_to_bank),
     path('transactions/<int:type>/<int:owner>/<int:thisMonth>/<int:nextMonth>/', views.transactions_list),
     path('edit_transactions/<int:pk>/', views.transaction_detail),
     path('login/', views.login),

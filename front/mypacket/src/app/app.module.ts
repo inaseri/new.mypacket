@@ -37,6 +37,7 @@ import { RestpasswordformComponent } from './restpasswordform/restpasswordform.c
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BankToBankComponent } from './bank-to-bank/bank-to-bank.component';
 
 
 const routes: Routes = [
@@ -56,7 +57,8 @@ const routes: Routes = [
   { path: 'changeBank/:id', component: ChangeBankComponent, canActivate: [Auth] },
   { path: 'changeTransaction/:id', component: ChangeTransactionComponent, canActivate: [Auth] },
   { path: 'forget_password', component: ResetpasswordComponent},
-  { path: 'reset_form', component: RestpasswordformComponent }
+  { path: 'reset_form', component: RestpasswordformComponent },
+  { path: 'bank-to-bank', component: BankToBankComponent }
 ];
 
 @NgModule({
@@ -81,7 +83,8 @@ const routes: Routes = [
     ChangeBankComponent,
     ChangeTransactionComponent,
     ResetpasswordComponent,
-    RestpasswordformComponent
+    RestpasswordformComponent,
+    BankToBankComponent
   ],
   imports: [
     BrowserModule,
