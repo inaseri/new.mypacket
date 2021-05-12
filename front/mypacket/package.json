@@ -24,7 +24,7 @@
     "angular-bootstrap-md": "8.9.0",
     "angular-material-persian-datepicker": "^1.2.0",
     "angular2-jwt": "^0.2.3",
-    "chart.js": "^2.5.0",
+    "chart.js": "^2.9.4",
     "hammerjs": "^2.0.8",
     "jalaali-js": "^1.1.0",
     "jalali-moment": "^3.3.3",
